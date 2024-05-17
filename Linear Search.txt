@@ -4,13 +4,13 @@ Linear search
 
 int main()
 {
-    int arr[5], i, search_key, flag;
-    printf("Enter the elements");
+    int arr[5], i, search_key, flag=0;
+    printf("Enter the elements: ");
     for(int i=0; i<5; i++)
     {
-        scanf("%d\n", &arr[i]);
+        scanf("%d", &arr[i]);
     }
-    printf("Enter the element to be searched");
+    printf("Enter the element to be searched: ");
     scanf("%d",&search_key);
     for(int i=0; i<5; i++)
     {
@@ -18,15 +18,21 @@ int main()
         {
         flag = 1;
         break;
-        printf("Element found");
         }
-        else
-        {
-            printf("Element not found");
-        }
-        
     }
+
+    if (flag == 1)
+    {
+        printf("Element found\n");
+    }
+    else
+    {
+        printf("Element not found\n");
+    }
+
+    return 0;
 }
+
 
 
 
